@@ -31,7 +31,7 @@ router.post('/threads', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-router.get('/threads', requireToken, (req, res, next) => {
+router.get('/threads', (req, res, next) => {
   Thread.find()
     .then(threads => {
       // `locations` will be an array of Mongoose documents
@@ -45,7 +45,7 @@ router.get('/threads', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-router.get('/threads/:id', requireToken, (req, res, next) => {
+router.get('/threads/:id', (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Thread.findById(req.params.id)
     .then(handle404)
