@@ -16,7 +16,7 @@ const threadSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  comment: [commentSchema],
+  comments: [commentSchema],
   owner: {
     // the reference type
     type: mongoose.Schema.Types.ObjectId,

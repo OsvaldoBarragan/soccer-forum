@@ -12,7 +12,8 @@ curl "${API}${URL_PATH}" \
     "thread": {
       "title": "'"${TITLE}"'",
       "post": "'"${POST}"'",
-      "category": "'"${CATEGORY}"'"
+      "category": "'"${CATEGORY}"'",
+      "username": "'"${USERNAME}"'"
     }
   }'
 

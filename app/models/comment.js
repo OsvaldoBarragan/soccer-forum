@@ -4,13 +4,6 @@ const commentSchema = new mongoose.Schema({
   body: {
     type: String,
     required: true
-  },
-  owner: {
-    // the reference type
-    type: mongoose.Schema.Types.ObjectId,
-    // when the owner is populated, use the User model
-    ref: 'User',
-    required: true
   }
 }, {
   // options go in the second object
